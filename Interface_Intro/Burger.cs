@@ -141,6 +141,7 @@ namespace Interfaces_Intro
                 }
             }
             Console.ForegroundColor = ConsoleColor.Green;
+            obj.DeliverOrNow();
             Console.WriteLine($"Price: {price + obj.Drink()}");
 
         }

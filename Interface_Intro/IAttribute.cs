@@ -13,7 +13,11 @@ namespace Interfaces_Intro
         public void Price();
         public int Drink()
         {
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine("If you want any drink Press 1");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("->");
+            Console.ForegroundColor = ConsoleColor.White;
             int d = Convert.ToInt32(Console.ReadLine());
             if (d == 1)
             {
@@ -25,6 +29,10 @@ namespace Interfaces_Intro
                 Console.WriteLine("1. Sprite \t(press 3)");
                 Console.WriteLine("1. Pepsi \t(press 4)");
                 Console.WriteLine("1. Pulpy \t(press 5)");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write
+                    ("->");
+                Console.ForegroundColor = ConsoleColor.White;
                 int juiceNumber = Convert.ToInt32(Console.ReadLine());
                 switch (juiceNumber)
                 {
@@ -67,11 +75,15 @@ namespace Interfaces_Intro
         }
         public void DeliverOrNow()
         {
-            Console.WriteLine($"If you want to eat now press 1");
-            Console.WriteLine($"If you want to bring with you press 2");
-            Console.WriteLine($"If you want to deliver to the address you wanted press 3");
-
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine($"\tIf you want to eat now press 1");
+            Console.WriteLine($"\tIf you want to bring with you press 2");
+            Console.WriteLine($"\tIf you want to deliver to the address you wanted press 3");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("->");
+            Console.ForegroundColor = ConsoleColor.White;
             int number = Convert.ToInt32(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Green;
             if (number == 1)
             {
                 Console.WriteLine("Your product will be ready in 5 minutes...\nBon Appetit");
@@ -82,8 +94,11 @@ namespace Interfaces_Intro
             }
             else if (number == 3)
             {
-                Console.WriteLine("Write your address: ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("Write your address: ");
+                Console.ForegroundColor = ConsoleColor.White;
                 string address = Console.ReadLine();
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"We will send your product in 30 minutes to {address}...\nBon Appetit");
             }
         }
