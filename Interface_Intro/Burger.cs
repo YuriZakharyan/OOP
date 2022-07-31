@@ -2,40 +2,147 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Interface_Intro
+namespace Interfaces_Intro
 {
     class Burger : IAttribute
     {
-        public string size;
-        public bool isDiet;
-        public string foods;
+        public int price { get; set; }
+
+        public bool isDiet { get; set; }
+
+
+        public int[] foodCounts { get; set; }
+        public int size { get; set; }
+
+        public string[] ChickenBurger = new string[] { "Chicken Meat", "Cheese", "Potato", "Cucumber", "Onion", "Tomato", "Pepper" };
+        public string[] BeafBurger = new string[] { "Beaf Meat", "Cheese", "Potato", "Cucumber", "Onion", "Tomato", "Pepper" };
+        public string[] tempBurger = new string[6];
+        public int[] tempBurgerCount = new int[6];
+        public Burger(bool a)
+        {
+
+        }
         public Burger()
         {
 
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("\tChoose Burger Size\n");
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Big\t---->\tPress 1");
+            Console.WriteLine("Medium\t---->\tPress 2");
+            Console.WriteLine("Small\t---->\tPress 3");
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("->");
+            Console.ForegroundColor = ConsoleColor.White;
+
+
+            size = Convert.ToInt32(Console.ReadLine());
+            Console.ForegroundColor = ConsoleColor.Green;
+            string tempSize;
+            switch (size)
+            {
+                case 1:
+                    tempSize = "Big";
+                    break;
+                case 2:
+                    tempSize = "Medium";
+                    break;
+                case 3:
+                    tempSize = "Small";
+                    break;
+                default:
+                    Console.WriteLine("Invalid input");
+                    return;
+            }
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine("\tIf you want Beaf Burger Press 1");
+            Console.WriteLine("\tIf you want Chicken burger Press 2");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("->");
+            Console.ForegroundColor = ConsoleColor.White;
+            int temp = Convert.ToInt32(Console.ReadLine());
+
+            if (temp == 1)
+            {
+                for (int i = 1; i < BeafBurger.Length; i++)
+                {
+                    tempBurger[i - 1] = BeafBurger[i];
+                }
+            }
+            if (temp == 2)
+            {
+                for (int i = 1; i < ChickenBurger.Length; i++)
+                {
+                    tempBurger[i - 1] = ChickenBurger[i];
+                }
+            }
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Blue;
+            if (temp == 1)
+            {
+                Console.WriteLine("\tWhat do you want to add your beefBurger. Input Counts");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                for (int i = 1; i < BeafBurger.Length; i++)
+                {
+                    Console.Write($"{BeafBurger[i]}:   ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    tempBurgerCount[i - 1] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            if (temp == 2)
+            {
+                Console.WriteLine("\tWhat do you want to add your Chicken Burger. Input Counts");
+                Console.ForegroundColor = ConsoleColor.Gray;
+                for (int i = 1; i < ChickenBurger.Length; i++)
+                {
+                    Console.Write($"{ChickenBurger[i]}:   ");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    tempBurgerCount[i - 1] = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+            //for (int i = 0; i < tempBurgerCount.Length; i++)
+            //{
+            //    Console.WriteLine(tempBurgerCount[i]);
+            //}
+
         }
-        public Burger(string size, bool isDiet, string foods)
+
+        public void Price()
         {
 
-            this.size = size;
-            this.isDiet = isDiet;
-            this.foods = foods;
-        }
+            IAttribute obj = new Burger(true);
 
-        public void Composition()
-        {
-            if (isDiet)
-            {
-                Console.Write("Your Burger is Dietic, which ");
-            }
-            else
-            {
-                Console.Write("Your Burger isn't dietic, which ");
-            }
-            Console.WriteLine($"size is {size}.");
-            Console.WriteLine($"Burger contains: {foods}");
+            int price = 0;
 
-            IAttribute obj = new Burger();                  //connect interface method, which have a body
-            Console.WriteLine($"Price: {obj.Price(foods)}");
+            if (size == 1) price = 1000;
+            if (size == 2) price = 750;
+            if (size == 3) price = 500;
+
+            for (int i = 0; i < tempBurger.Length; i++)
+            {
+                if (tempBurger[i] == "Cheese")
+                {
+                    price += tempBurgerCount[i] * 300;
+                }
+                if (tempBurger[i] == "Potato")
+                {
+                    price += tempBurgerCount[i] * 200;
+                }
+                if (tempBurger[i] == "Cucumber")
+                {
+                    price += tempBurgerCount[i] * 100;
+                }
+                if (tempBurger[i] == "Tomato")
+                {
+                    price += tempBurgerCount[i] * 100;
+                }
+            }
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"Price: {price + obj.Drink()}");
+
         }
     }
 }
