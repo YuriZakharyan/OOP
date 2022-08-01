@@ -62,14 +62,13 @@ namespace Interfaces_Intro
                         Console.ForegroundColor = ConsoleColor.Green;
                         return price;
                     default:
-                        Console.WriteLine("Invalid Input");
                         Console.ForegroundColor = ConsoleColor.Green;
-                        return 0;
+                        throw new Exception("\n\tInvalid Input\n");
                 }
             }
             else
             {
-                return 0;
+                throw new Exception("\n\tInvalid Input\n");
             }
         }
         public void DeliverOrNow()
@@ -99,6 +98,10 @@ namespace Interfaces_Intro
                 string address = Console.ReadLine();
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"We will send your product in 30 minutes to {address}...\nBon Appetit");
+            }
+            else
+            {
+                throw new Exception("\n\tInvalid Input\n");
             }
         }
     }

@@ -54,8 +54,7 @@ namespace Interfaces_Intro
                     tempSize = "Small";
                     break;
                 default:
-                    Console.WriteLine("Invalid input");
-                    return;
+                    throw new Exception("\n\tInvalid Input\n");
             }
 
             Console.ForegroundColor = ConsoleColor.Blue;
@@ -80,6 +79,10 @@ namespace Interfaces_Intro
                     tempBurger[i - 1] = ChickenBurger[i];
                 }
             }
+            else
+            {
+                throw new Exception("\n\tInvalid Input\n");
+            }
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Blue;
             if (temp == 1)
@@ -103,6 +106,10 @@ namespace Interfaces_Intro
                     Console.ForegroundColor = ConsoleColor.White;
                     tempBurgerCount[i - 1] = Convert.ToInt32(Console.ReadLine());
                 }
+            }
+            else
+            {
+                throw new Exception("\n\tInvalid Input\n");
             }
             //for (int i = 0; i < tempBurgerCount.Length; i++)
             //{
