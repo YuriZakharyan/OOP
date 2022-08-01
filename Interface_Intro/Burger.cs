@@ -18,6 +18,7 @@ namespace Interfaces_Intro
         public string[] BeafBurger = new string[] { "Beaf Meat", "Cheese", "Potato", "Cucumber", "Onion", "Tomato", "Pepper" };
         public string[] tempBurger = new string[6];
         public int[] tempBurgerCount = new int[6];
+        public string tempSize;
         public Burger(bool a)
         {
 
@@ -40,7 +41,7 @@ namespace Interfaces_Intro
 
             size = Convert.ToInt32(Console.ReadLine());
             Console.ForegroundColor = ConsoleColor.Green;
-            string tempSize;
+            
             switch (size)
             {
                 case 1:
@@ -112,10 +113,12 @@ namespace Interfaces_Intro
 
         public void Price()
         {
+            
 
             IAttribute obj = new Burger(true);
 
             int price = 0;
+
 
             if (size == 1) price = 1000;
             if (size == 2) price = 750;
@@ -142,8 +145,25 @@ namespace Interfaces_Intro
             }
             Console.ForegroundColor = ConsoleColor.Green;
             obj.DeliverOrNow();
-            Console.WriteLine($"Price: {price + obj.Drink()}");
+            
 
+            Console.WriteLine($"Price: {price + obj.Drink()}");
+            if (tempSize == "Big")
+            {
+                Console.WriteLine("Your Big Burger is ready");
+            }
+            else if (tempSize == "Big")
+            {
+                Console.WriteLine("Your Big Burger is ready");
+            }
+            else if (tempSize == "Big")
+            {
+                Console.WriteLine("Your Big Burger is ready");
+            }
+            else
+            {
+                Console.WriteLine("You didn't write your burger size");
+            }
         }
     }
 }
