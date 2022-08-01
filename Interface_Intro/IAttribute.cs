@@ -30,8 +30,7 @@ namespace Interfaces_Intro
                 Console.WriteLine("1. Pepsi \t(press 4)");
                 Console.WriteLine("1. Pulpy \t(press 5)");
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.Write
-                    ("->");
+                Console.Write("->");
                 Console.ForegroundColor = ConsoleColor.White;
                 int juiceNumber = Convert.ToInt32(Console.ReadLine());
                 switch (juiceNumber)
@@ -102,6 +101,5 @@ namespace Interfaces_Intro
                 Console.WriteLine($"We will send your product in 30 minutes to {address}...\nBon Appetit");
             }
         }
-
     }
 }
