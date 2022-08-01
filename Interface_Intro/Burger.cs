@@ -148,22 +148,7 @@ namespace Interfaces_Intro
             
 
             Console.WriteLine($"Price: {price + obj.Drink()}");
-            if (tempSize == "Big")
-            {
-                Console.WriteLine("Your Big Burger is ready");
-            }
-            else if (tempSize == "Big")
-            {
-                Console.WriteLine("Your Big Burger is ready");
-            }
-            else if (tempSize == "Big")
-            {
-                Console.WriteLine("Your Big Burger is ready");
-            }
-            else
-            {
-                Console.WriteLine("You didn't write your burger size");
-            }
+            
         }
     }
 }
