@@ -1,12 +1,13 @@
 ﻿using System;
-using System.Timers;
+//using System.Timers;
+using System.Threading;
 namespace Restaurant_Project
 {
     class Pandok : Restaurant,IConditions
     {
         //public object[] Foods = new object[] { new BBQ(), new Burger(), new Pizza() }; 
-        // private static System.Timers.Timer timer;
-     
+        private Timer timer = null;
+        
 
         public int[] Foods = new int[] { 1, 2, 4 };
         public string Address { get; set; }
@@ -24,6 +25,12 @@ namespace Restaurant_Project
             }
             Console.ForegroundColor = ConsoleColor.White;
         }
+        private static void TimerCallback(Object o)
+        {
+            // Display the date/time when this method got called.
+
+            //Console.WriteLine("In TimerCallback: " + DateTime.Now);
+        }
         public override void Deliver(int foodType)
         {
             //BBQ = 0,
@@ -40,19 +47,27 @@ namespace Restaurant_Project
             //patrasta  13:20
             int tempMin = DateTime.Now.Minute;
             Console.WriteLine(DateTime.Now);
-            while(DateTime.Now.Minute - tempMin <= 20)
+            while (DateTime.Now.Minute - tempMin <= 1)
             {
-                continue;
+                timer = new Timer(TimerCallback, null, 0, 6000);
             }
+
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine($"\n{DateTime.Now}");
-            isAvailable = true;
-            Console.WriteLine($"Your {Enum.GetName(typeof(MenuList), Foods[foodType] - 1)} is Ready");
-            Console.ForegroundColor = ConsoleColor.White;
-        }
-        private void NewTimer_Elapsed(object sender, ElapsedEventArgs e)
-        {
-            throw new NotImplementedException();
+            Console.WriteLine(DateTime.Now);
+            Console.WriteLine($"Your {Enum.GetName(typeof(MenuList), Foods[foodType-1])} is Ready");
+            Console.ReadLine();
+
+            ///int tempMin = DateTime.Now.Minute;
+            ///Console.WriteLine(DateTime.Now);
+            ///while(DateTime.Now.Minute - tempMin <= 20)
+            ///{
+            ///    continue;
+            ///}
+            ///Console.ForegroundColor = ConsoleColor.Green;
+            ///Console.WriteLine($"\n{DateTime.Now}");
+            ///isAvailable = true;
+            ///Console.WriteLine($"Your {Enum.GetName(typeof(MenuList), Foods[foodType] - 1)} is Ready");
+            ///Console.ForegroundColor = ConsoleColor.White;
         }
 
         public override void ReturnFood()
