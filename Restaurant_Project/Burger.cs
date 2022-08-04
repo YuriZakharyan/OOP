@@ -4,7 +4,11 @@ using System.Text;
 
 namespace Restaurant_Project
 {
-    class Burger
+    class Burger : Menu
     {
+        public override void Make()
+        {
+
+        }
     }
 }

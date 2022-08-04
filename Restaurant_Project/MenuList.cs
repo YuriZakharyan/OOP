@@ -6,9 +6,10 @@ namespace Restaurant_Project
 {
     public enum MenuList
     {
-        BBQ,
-        Shaurma,
-        Burger,
-        Pizza
+        BBQ = 1,
+        Shaurma = 2,
+        Burger = 3,
+        Pizza = 4,
+        Sushi = 5
     }
 }
