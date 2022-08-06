@@ -9,7 +9,21 @@ namespace Exeptions
     {
         public int GrandParentGetNumber(int position)
         {
-            return ParentGetNumber(position);
+            int output = 0;
+            Console.WriteLine("Method start");
+            try
+            {
+                output = ParentGetNumber(position);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Finally");
+            }
+            return output;
         }
         public int ParentGetNumber(int position)
         {
