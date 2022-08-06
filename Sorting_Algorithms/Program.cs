@@ -63,18 +63,18 @@ namespace Sorting_Algorithms
             Console.WriteLine();
         }
         /// Merger Sort
-        
-        static void MergeSort(int []arr, int left, int middle, int right)
+
+        static void MergeSort(int[] arr, int left, int middle, int right)
         {
             int leftArrLength = middle - left + 1;
             int rightArrLength = right - middle;
 
             int[] leftArr = new int[leftArrLength];
             int[] rightArr = new int[rightArrLength];
-            
-            int i,j;
 
-            for(i = 0; i<leftArr.Length; i++)
+            int i, j;
+
+            for (i = 0; i < leftArr.Length; i++)
             {
                 leftArr[i] = arr[left + i];
             }
@@ -85,9 +85,9 @@ namespace Sorting_Algorithms
             i = 0;
             j = 0;
             int k = left;
-            while(i<leftArr.Length && j < rightArr.Length)
+            while (i < leftArr.Length && j < rightArr.Length)
             {
-                if(leftArr[i] <= rightArr[j])
+                if (leftArr[i] <= rightArr[j])
                 {
                     arr[k] = leftArr[i];
                     i++;
@@ -100,7 +100,7 @@ namespace Sorting_Algorithms
                 k++;
             }
 
-            while(i < leftArr.Length)
+            while (i < leftArr.Length)
             {
                 arr[k] = leftArr[i];
                 i++;
@@ -120,7 +120,7 @@ namespace Sorting_Algorithms
             if (left < right)
             {
                 int middle = left + (right - left) / 2;
-                
+
                 Sort_Merge(arr, left, middle);
                 Sort_Merge(arr, middle + 1, right);
 
@@ -129,34 +129,65 @@ namespace Sorting_Algorithms
         }
 
         //  Selection Sort
-        static void SelectionSort(int [] arr)
+        static void SelectionSort(int[] arr)
         {
             int min;                                        //  0   1   2   3   4   5   6   7   
-            for (int i = 0; i<arr.Length; i++)              //  1   5   4   9   15  0   2   -6
+            for (int i = 0; i < arr.Length; i++)              //  1   5   4   9   15  0   2   -6
             {
                 min = i;
-                for(int j = i + 1; j < arr.Length; j++)
+                for (int j = i + 1; j < arr.Length; j++)
                 {
-                    if (arr[min] > arr[j] )
+                    if (arr[min] > arr[j])
                     {
                         min = j;
                     }
-                    Swap(ref arr[i],ref arr[min]);
                 }
+                Swap(ref arr[i], ref arr[min]);
             }
         }
 
+        //Quick Sort
+        public static void QuickSort(int[]arr, int leftIndex, int rightIndex)
+        {
+            int i = leftIndex;
+            int j = rightIndex;
+            int pivot = arr[leftIndex];
 
+            while (i < j)
+            {
+                while (arr[i] < pivot)
+                {
+                    i++;
+                }
+                while (arr[j] > pivot)
+                {
+                    j--;
+                }
 
+                if (i <= j)
+                {
+                    Swap(ref arr[i], ref arr[j]);
+                    i++;
+                    j--;
+                }
+            }
 
+            if (leftIndex < j)
+            {
+                QuickSort(arr, leftIndex, j);
+            }
+            if (i<rightIndex)
+            {
+                QuickSort(arr, i, rightIndex);
+            }
+        }
         static void Main(string[] args)
         {
-            int[] arr = { 1, 5, 4, 9, 15, 0, 2, -6 };
+            int[] arr = { 1, 5, 4, 9, 15, 0, 2, -6, 5 };
             /*
             BubbleSort1(arr);
             PrintArray(arr);
             */
-
             /*
             BubbleSort2(arr);
             PrintArray(arr);
@@ -176,6 +207,13 @@ namespace Sorting_Algorithms
             SelectionSort(arr);
             PrintArray(arr);
             */
+
+            /*
+            QuickSort(arr, 0, arr.Length - 1);
+            PrintArray(arr);
+            */
+
+
         }
     }
 }
