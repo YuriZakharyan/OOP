@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interface_Intro", "..\Inter
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Animals", "..\Animals\Animals.csproj", "{07955D8D-24FA-44B4-AC42-EB59CAA61D2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Restaurant_Project", "..\Restaurant_Project\Restaurant_Project.csproj", "{BAC0FB8D-6685-4535-9B3E-1A0EDBB57083}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Restaurant_Project", "..\Restaurant_Project\Restaurant_Project.csproj", "{BAC0FB8D-6685-4535-9B3E-1A0EDBB57083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting_Algorithms", "..\Sorting_Algorithms\Sorting_Algorithms.csproj", "{A711CA46-5313-45F3-9F47-8789E2026388}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{BAC0FB8D-6685-4535-9B3E-1A0EDBB57083}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BAC0FB8D-6685-4535-9B3E-1A0EDBB57083}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BAC0FB8D-6685-4535-9B3E-1A0EDBB57083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A711CA46-5313-45F3-9F47-8789E2026388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A711CA46-5313-45F3-9F47-8789E2026388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A711CA46-5313-45F3-9F47-8789E2026388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A711CA46-5313-45F3-9F47-8789E2026388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
