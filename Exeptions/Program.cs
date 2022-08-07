@@ -12,9 +12,9 @@ namespace Exeptions
             
             Calculator c = new Calculator();
             c.Calc();
-            */
+            
             ///________________________________________________________________________________
-
+            */
 
 
             //try
@@ -30,7 +30,7 @@ namespace Exeptions
 
             //ExeptionDemo obj = new ExeptionDemo();
             //Console.WriteLine(obj.GrandParentGetNumber(9));
-            //
+            
 
 
 

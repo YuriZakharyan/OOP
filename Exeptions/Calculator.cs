@@ -36,13 +36,21 @@ namespace Exeptions
                     {
                         Console.WriteLine($"{a} / {b} = {a / b}");
                     }
-                    catch (Exception ex)
+                    catch (DivideByZeroException ex1)
                     {
                         if (b == 0)
                         {
                             Console.WriteLine("You cannot devide number to zero");
-                            Console.WriteLine(ex.Message);
+                            Console.WriteLine(ex1.Message);
                         }
+                    }
+                    catch (IndexOutOfRangeException ex2)
+                    {
+                        Console.WriteLine(ex2.Message);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("Finally");
                     }
                     break;
             }
