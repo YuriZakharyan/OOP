@@ -17,9 +17,12 @@ namespace Delegates
             del1 += DelegIntroClass.Sum;
             Console.WriteLine(del1(3, 6));
             del1 += DelegIntroClass.Sub;
-            Console.WriteLine(del1(3, 6));
+            Console.WriteLine(del1.Invoke(5,4));
 
 
+
+            //del1.Invoke(5,4);
+            //del1(3, 6);
         }
     }
 }
