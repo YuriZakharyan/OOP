@@ -68,6 +68,21 @@ namespace Delegates
             d1(5);
             */
 
+            /*
+            //Predicate Delegate            -> return boolean value
+
+            DelegIntroClass obb = new DelegIntroClass();
+            PredicateDelagate<int> aaa = obb.isIntager;
+            Console.WriteLine(aaa.Invoke(99999));
+            
+            PredicateDelagate<string> sss = obb.IsUpperCase;
+            Console.WriteLine(sss.Invoke("HELLO"));         //true
+            Console.WriteLine(sss.Invoke("HELLo"));         //false
+            
+            sss += obb.isIntager;
+            Console.WriteLine(sss("5"));
+
+            */
 
 
 

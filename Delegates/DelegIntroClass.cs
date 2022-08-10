@@ -15,7 +15,8 @@ namespace Delegates
 
     //Action delegate
     public delegate void PrintDelegate<T>(T arg);
-
+    //Predicate delegate
+    public delegate bool PredicateDelagate<in T>(T obj);
 
     class DelegIntroClass
     {
@@ -77,6 +78,19 @@ namespace Delegates
         public void PrintType<T>(T arg)
         {
             Console.WriteLine($"Type of {arg}:  " + arg.GetType().Name);
+        }
+
+        public bool IsUpperCase(string arg)
+        {
+            Console.WriteLine($"Value: {arg}");
+
+            return arg.ToUpper() == arg;
+        }
+
+        public bool isIntager<T>(T value)
+        {
+            Console.WriteLine($"Value: {value}");
+            return (value.GetType().ToString() == "System.Int32");
         }
     }
 }
