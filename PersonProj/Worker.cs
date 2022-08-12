@@ -34,7 +34,35 @@ namespace PersonProj
         public void PrintProfession(int num)
         {
             jobName = (JobsEnum)num;
-            Console.WriteLine($"You are {jobName}");
+            string position = "";
+            Console.ForegroundColor = ConsoleColor.Blue;
+            
+            Console.ForegroundColor = ConsoleColor.White;
+            int k = 0;
+            switch (num)
+            {
+
+                case 1:
+                    Console.WriteLine("Write your Position:");
+                    foreach (var item in Enum.GetValues(typeof(DevPositionsEnum)))
+                    {
+                        Console.WriteLine($"{item} \t{(int)item}");
+                    }
+                    k = Convert.ToInt32(Console.ReadLine());
+                    position = ((DevPositionsEnum)k).ToString();
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
+            }
+            Console.WriteLine($"You are {position} {jobName}");
         }
 
         public void SalaryOfMonth()

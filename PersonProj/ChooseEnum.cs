@@ -4,9 +4,10 @@ using System.Text;
 
 namespace PersonProj
 {
-    interface IStudent
+    public enum ChooseEnum
     {
-        
-        
+        Studing = 1,
+        Working = 2,
+        Pensioner = 3
     }
 }

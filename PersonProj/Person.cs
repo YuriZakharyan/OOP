@@ -8,7 +8,29 @@ namespace PersonProj
     {
         private string firstName;
         private string lastName;
-        //private int age = 0;
+        private int age;
+        public int Age
+        {
+            get
+            {
+                return age;
+            }
+            set
+            {
+                age = value;
+                if(age<16 || age > 100)
+                {
+                    age = -1;
+                }
+            }
+        }
+        public void DisplayInfo()
+        {
+            foreach(var item in Enum.GetValues(typeof(ChooseEnum)))
+            {
+                Console.WriteLine($"{item}   \t{(int)item}");
+            }
+        }
         private string phoneNumber;
         public string FirstName
         {
@@ -40,7 +62,7 @@ namespace PersonProj
         {
             get
             {
-                
+
                 Console.Write("Last Name: ");
                 return lastName;
             }

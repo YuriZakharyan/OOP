@@ -4,9 +4,11 @@ using System.Text;
 
 namespace PersonProj
 {
-    interface IStudent
+    public enum DevPositionsEnum
     {
-        
-        
+        Intern,
+        Junior,
+        Mid,
+        Senior
     }
 }
