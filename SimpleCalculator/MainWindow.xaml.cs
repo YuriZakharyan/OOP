@@ -39,34 +39,43 @@ namespace SimpleCalculator
         {
             first = int.Parse(Display.Text);
             sign = '/';
-            Display.Clear();
+
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+
         }
 
         private void Button_Mul_Click(object sender, RoutedEventArgs e)
         {
             first = int.Parse(Display.Text);
             sign = '*';
-            Display.Clear();
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)
         {
             first = int.Parse(Display.Text);
             sign = '+';
-            Display.Clear();
+
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
         }
 
         private void Button_Sub_Click(object sender, RoutedEventArgs e)
         {
             first = int.Parse(Display.Text);
             sign = '-';
-            Display.Clear();
+
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
         }
 
         private void Button_Equal_Click(object sender, RoutedEventArgs e)
         {
-            second = Convert.ToInt32(Display.Text);
-            int result = 0;
+            int s = Display.Text.IndexOf(sign);
+            second = Convert.ToInt32(Display.Text.Substring(s + 1));
+            double result = 0;
             switch (sign)
             {
                 case '+':
@@ -81,7 +90,7 @@ namespace SimpleCalculator
                 case '/':
                     try
                     {
-                        result = first - second;
+                        result = (double)first / second;
                         break;
                     }
                     catch (DivideByZeroException)
@@ -91,7 +100,7 @@ namespace SimpleCalculator
                     break;
             }
 
-            if(Display.Text == "0")
+            if (Display.Text == "0")
             {
                 Display.Clear();
             }
@@ -102,7 +111,72 @@ namespace SimpleCalculator
         {
             Button btn = (Button)sender;
             Display.Text += btn.Content.ToString();
-            second = Int32.Parse(Display.Text);
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_5_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_3_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_4_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_6_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_7_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_8_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_9_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
+        }
+
+        private void Button_0_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = (Button)sender;
+            Display.Text += btn.Content.ToString();
+            int s = Display.Text.IndexOf(sign);
+            second = Int32.Parse(Display.Text.Substring(s + 1));
         }
 
         private void Button_Clear_Click(object sender, RoutedEventArgs e)
