@@ -77,8 +77,8 @@ namespace SimpleCalculator
             int s = Display.Text.IndexOf(sign);
             second = Convert.ToInt32(Display.Text.Substring(s + 1));
             double result = 0;
-
-
+            
+            
             switch (sign)
             {
                 case '+':
