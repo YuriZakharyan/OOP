@@ -111,8 +111,9 @@ namespace DataStructuresIntro
             */
 
             /*
-             //////////////////??????????????????
+            //????????????
             Hashtable aaa = new Hashtable();
+            aaa.Add(0, "Cpp");
             aaa.Add(1, "CSharp");
             aaa.Add(2, "Cpp");
             aaa.Add(3, "Java");
@@ -122,8 +123,51 @@ namespace DataStructuresIntro
             {
                 Console.WriteLine($"{item}: {aaa[item]}");
             }
+            for(int i = 0; i<aaa.Count; i++)
+            {
+                Console.WriteLine(aaa[i]);
+            }
             */
 
+
+            /*
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.AddFirst(0);
+            linkedList.AddLast(1);
+            linkedList.AddLast(2);
+            linkedList.AddLast(3);
+            linkedList.AddLast(4);
+            linkedList.AddLast(5);
+            linkedList.AddLast(6);
+            foreach (var item in linkedList)
+            {
+                Console.WriteLine(item);
+            }
+            linkedList.Remove(4);
+            foreach (var item in linkedList)
+            {
+                Console.WriteLine(item);
+            }
+            linkedList.RemoveFirst();
+            foreach (var item in linkedList)
+            {
+                Console.WriteLine(item);
+            }
+            */
+            /*
+            StackUsingLinkedList obj = new StackUsingLinkedList();
+            obj.push(5);
+            obj.push(0);
+            obj.push(-2);
+            obj.push(1);
+            obj.push(4);
+            obj.push(7);
+            obj.Display();
+            Console.WriteLine();
+            obj.pop();
+            obj.Display();
+            Console.WriteLine(obj.Peek());
+            */
         }
     }
 }
