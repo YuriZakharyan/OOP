@@ -9,7 +9,7 @@ namespace DataStructuresIntro
         public int Id { get; set; }
         public float GPA { get; set; }
 
-        public Student(int Id,  float GPA)
+        public Student(int Id, float GPA)
         {
             this.Id = Id;
             this.GPA = GPA;
@@ -17,5 +17,9 @@ namespace DataStructuresIntro
 
         
 
+
+        }
     }
+
+
 }

@@ -27,7 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonProj", "..\PersonProj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleCalculator", "..\SimpleCalculator\SimpleCalculator.csproj", "{594B5B61-7AC2-4D4F-892B-7B35608B4AEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataStructuresIntro", "..\DataStructuresIntro\DataStructuresIntro.csproj", "{51353D9E-AEE0-47D5-9F1D-4A0BD5F144B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresIntro", "..\DataStructuresIntro\DataStructuresIntro.csproj", "{51353D9E-AEE0-47D5-9F1D-4A0BD5F144B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_9", "..\Lesson_9\Lesson_9.csproj", "{1242F5E8-01EA-4DA9-8698-07D870E248E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ref_Out_In", "..\Ref_Out_In\Ref_Out_In.csproj", "{DC639D32-4EC5-48D0-A819-D7D40127BF3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +91,14 @@ Global
 		{51353D9E-AEE0-47D5-9F1D-4A0BD5F144B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51353D9E-AEE0-47D5-9F1D-4A0BD5F144B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51353D9E-AEE0-47D5-9F1D-4A0BD5F144B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1242F5E8-01EA-4DA9-8698-07D870E248E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1242F5E8-01EA-4DA9-8698-07D870E248E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1242F5E8-01EA-4DA9-8698-07D870E248E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1242F5E8-01EA-4DA9-8698-07D870E248E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
