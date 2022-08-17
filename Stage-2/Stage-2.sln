@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataStructuresIntro", "..\D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson_9", "..\Lesson_9\Lesson_9.csproj", "{1242F5E8-01EA-4DA9-8698-07D870E248E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ref_Out_In", "..\Ref_Out_In\Ref_Out_In.csproj", "{DC639D32-4EC5-48D0-A819-D7D40127BF3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ref_Out_In", "..\Ref_Out_In\Ref_Out_In.csproj", "{DC639D32-4EC5-48D0-A819-D7D40127BF3E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileStream", "..\FileStream\FileStream.csproj", "{24A78463-E65A-449E-9819-FB31D0D73AC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC639D32-4EC5-48D0-A819-D7D40127BF3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

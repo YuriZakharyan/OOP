@@ -16,7 +16,6 @@ namespace Ref_Out_In
         static void Foo2(in Point value)
         {
         }
-
         static void Main(string[] args)
         {
             Point ob = new Point();
@@ -33,6 +32,7 @@ namespace Ref_Out_In
             {
                 Foo2(ob);
             }
+
             sw.Stop();
             Console.WriteLine($"Foo2:   {sw.ElapsedMilliseconds}");
         }
