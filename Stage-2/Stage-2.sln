@@ -35,6 +35,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ref_Out_In", "..\Ref_Out_In
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileStream", "..\FileStream\FileStream.csproj", "{24A78463-E65A-449E-9819-FB31D0D73AC0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Excel_Example", "..\Excel_Example\Excel_Example.csproj", "{E59DB4DA-A05B-4F6F-9401-1650883A174E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,10 @@ Global
 		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24A78463-E65A-449E-9819-FB31D0D73AC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E59DB4DA-A05B-4F6F-9401-1650883A174E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E59DB4DA-A05B-4F6F-9401-1650883A174E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E59DB4DA-A05B-4F6F-9401-1650883A174E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E59DB4DA-A05B-4F6F-9401-1650883A174E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
