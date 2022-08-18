@@ -13,11 +13,8 @@ namespace Excel_Example
         {
             string filePath = @"D:\Students.xlsx";
             Application excel = new Application();
-            Workbook wb;
-            Worksheet ws;
-            
-            wb = excel.Workbooks.Open(filePath);
-            ws = wb.Worksheets[1];
+            Workbook wb = excel.Workbooks.Open(filePath);
+            Worksheet ws = wb.Worksheets[1];
 
             string[] names = System.IO.File.ReadAllText(@"D:\names.txt").Replace(" ", "").Split(',');
             
@@ -28,11 +25,7 @@ namespace Excel_Example
             wb.SaveAs(filePath);
             wb.Close();
             
-            
             Process.Start(@"D:\Students.xlsx");
-
-
-
         }
     }
 }
