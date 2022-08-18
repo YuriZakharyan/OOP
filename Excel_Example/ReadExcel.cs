@@ -14,15 +14,15 @@ namespace Excel_Example
         public static void readExcel()
         {
 
-            string filePath = @"D:\Names_Basic.xlsx";
+            string filePath = @"D:\Students.xlsx";
             Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
-            Workbook wb;
-            Worksheet ws;
+            Workbook wb = excel.Workbooks.Open(filePath); 
+            Worksheet ws = wb.Worksheets[1];
 
-            wb = excel.Workbooks.Open(filePath);
-            ws = wb.Worksheets[1];
-            Range cell = ws.Range["A1:A1"];
-            foreach (var Result in cell.Value)
+//            wb = excel.Workbooks.Open(filePath);
+//            ws = wb.Worksheets[1];
+            Range cell = ws.Range["A1:E1"];
+            foreach (string Result in cell.Value)
             {
                 MessageBox.Show(Result);
             }

@@ -7,7 +7,6 @@ namespace aaaa
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            dax
         }
     }
 }

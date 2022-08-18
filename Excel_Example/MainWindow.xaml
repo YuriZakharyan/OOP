@@ -5,10 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Excel_Example"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Excel Program" Height="238.8" Width="691.2">
     <Grid>
-        <Button x:Name="CmdWrite" Content="Write" HorizontalAlignment="Left" Margin="99,67,0,0" VerticalAlignment="Top" Width="215" Height="84" FontSize="36" Click="CmdWrite_Click"/>
-        <Button x:Name="CmdRead" Content="Read" HorizontalAlignment="Left" Margin="475,67,0,0" VerticalAlignment="Top" Width="215" Height="84" FontSize="36" Click="CmdRead_Click"/>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="#FFECE7FF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="CmdWrite" Content="Write" HorizontalAlignment="Left" Margin="95,63,0,0" VerticalAlignment="Top" Width="215" Height="84" FontSize="36" Click="CmdWrite_Click" Background="White"/>
+        <Button x:Name="CmdRead" Content="Read" HorizontalAlignment="Left" Margin="384,63,0,0" VerticalAlignment="Top" Width="215" Height="84" FontSize="36" Click="CmdRead_Click" Background="White"/>
 
     </Grid>
 </Window>

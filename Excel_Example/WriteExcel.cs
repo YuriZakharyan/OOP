@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Office.Interop.Excel;
-
+using System.Diagnostics;
 namespace Excel_Example
 {
     class WriteExcel
     {
         public static void writeExcel()
         {
-            string filePath = @"D:\Names_Basic.xlsx";
+            string filePath = @"D:\Students.xlsx";
             Application excel = new Application();
             Workbook wb;
             Worksheet ws;
@@ -19,11 +19,19 @@ namespace Excel_Example
             wb = excel.Workbooks.Open(filePath);
             ws = wb.Worksheets[1];
 
-            Range cellRange = ws.Range["C2:D3"];
-            cellRange.Value = "Aram";
+            string[] names = System.IO.File.ReadAllText(@"D:\names.txt").Replace(" ", "").Split(',');
+            
+            Range cellRange = ws.Range["A1:E1"];
+
+            cellRange.set_Value(XlRangeValueDataType.xlRangeValueDefault, names);
 
             wb.SaveAs(filePath);
             wb.Close();
+            
+            
+            Process.Start(@"D:\Students.xlsx");
+
+
 
         }
     }
