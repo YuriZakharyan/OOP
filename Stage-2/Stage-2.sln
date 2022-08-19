@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Human_Proj", "..\Human_Proj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aaaa", "..\aaaa\aaaa.csproj", "{7D91FDD0-D1F0-41CF-B7E3-C61EFD8B8BA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Async_Await_Intro", "..\Async_Await_Intro\Async_Await_Intro.csproj", "{7E37A079-F73F-41AC-9107-2F7947FEB4E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Async_Await_Intro", "..\Async_Await_Intro\Async_Await_Intro.csproj", "{7E37A079-F73F-41AC-9107-2F7947FEB4E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thread_Task", "..\Thread_Task\Thread_Task.csproj", "{713384D9-84E0-4AF2-B973-FDF0D0C9C224}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -129,6 +131,10 @@ Global
 		{7E37A079-F73F-41AC-9107-2F7947FEB4E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E37A079-F73F-41AC-9107-2F7947FEB4E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E37A079-F73F-41AC-9107-2F7947FEB4E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{713384D9-84E0-4AF2-B973-FDF0D0C9C224}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713384D9-84E0-4AF2-B973-FDF0D0C9C224}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713384D9-84E0-4AF2-B973-FDF0D0C9C224}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713384D9-84E0-4AF2-B973-FDF0D0C9C224}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
