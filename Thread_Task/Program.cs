@@ -33,20 +33,29 @@ namespace Thread_Task
         */
         static void Calculate()
         {
-            Task.Run(() =>
+            var task1 = Task.Run(() =>
             {
-                Calc1();
+                return Calc1();
             });
-            Task.Run(() =>
+            var task2 = Task.Run(() =>
             {
-                Calc2();
-            });
-
-            Task.Run(() =>
-            {
-                Calc3();
+                return Calc2();
             });
 
+            Task.WaitAll(task1, task2);
+
+            var awaiter1 = task1.GetAwaiter();
+            var awaiter2 = task2.GetAwaiter();
+            var result1 = awaiter1.GetResult();
+            var result2 = awaiter2.GetResult();
+
+            Calc3(result1, result2);
+            /*
+            var task3 = Task.Run(() =>
+            {
+                return Calc3(100, 300);
+            });
+            */
         }
         static int Calc1()
         {
@@ -60,11 +69,11 @@ namespace Thread_Task
             Console.WriteLine("Calc2");
             return 200;
         }
-        static int Calc3()
+        static int Calc3(int a, int b)
         {
-            Thread.Sleep(3000);
+            Thread.Sleep(2000);
             Console.WriteLine("Calc3");
-            return 300;
+            return a + b;
         }
         static void Main(string[] args)
         {
