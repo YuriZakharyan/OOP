@@ -145,13 +145,13 @@ namespace Sorting_Algorithms
                 Swap(ref arr[i], ref arr[min]);
             }
         }
-
+        
         //Quick Sort
         public static void QuickSort(int[]arr, int leftIndex, int rightIndex)
         {
             int i = leftIndex;
             int j = rightIndex;
-            int pivot = arr[leftIndex];
+            int pivot = arr[rightIndex];
 
             while (i < j)
             {
@@ -163,7 +163,6 @@ namespace Sorting_Algorithms
                 {
                     j--;
                 }
-
                 if (i <= j)
                 {
                     Swap(ref arr[i], ref arr[j]);
@@ -181,6 +180,7 @@ namespace Sorting_Algorithms
                 QuickSort(arr, i, rightIndex);
             }
         }
+        
         static void Main(string[] args)
         {
             int[] arr = { 1, 5, 4, 9, 15, 0, 2, -6, 5 };
