@@ -169,7 +169,27 @@ namespace DataStructuresIntro
             Console.WriteLine(obj.Peek());
             */
 
-   
+
+            //Queue queue = new Queue();
+            //queue.Enqueue(5);
+            //queue.Enqueue(1);
+            //queue.Enqueue(1);
+            //queue.Enqueue(0); 
+            //queue.Enqueue(16);
+            //queue.Enqueue(4);
+            //foreach(var item in queue)
+            //{
+            //    Console.Write($"{item} <- ");
+            //}
+            //queue.Dequeue();
+            //Console.WriteLine();
+            //foreach(var item in queue)
+            //{
+            //    Console.Write($"{item} <- ");
+            //}
+            //
+
+
         }
     }
 }
