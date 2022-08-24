@@ -70,10 +70,23 @@ namespace DataStructuresIntro
                 temp.next = newNode;
             }
         }
+        public bool Search(int x)
+        {
+            Nodee temp = head;
+            while(temp != null)
+            {
+                if(temp.data == x)
+                {
+                    return true;
+                }
+                temp = temp.next;
+            }
+            return false;
+        }
         public void Print()
         {
             Nodee temp = head;
-            while(temp.next != null)
+            while (temp != null)
             {
                 Console.Write($"{temp.data} -> ");
                 temp = temp.next;
@@ -81,5 +94,43 @@ namespace DataStructuresIntro
             Console.WriteLine();
         }
 
+        public void DeleteAt(int pos)
+        {
+            if (pos < 1)
+            {
+                Console.Write("\nPosition should be >= 1.");
+            }
+            else if (pos == 1 && head != null)
+            {
+                Nodee nodeToDelete = head;
+                head = head.next;
+                nodeToDelete = null;
+            }
+            else
+            {
+                Nodee temp = new Nodee();
+                temp = head;
+                for (int i = 1; i < pos - 1; i++)
+                {
+                    if (temp != null)
+                    {
+                        temp = temp.next;
+                    }
+
+                }
+                if (temp != null && temp.next != null)
+                {
+                    Nodee nodeToDelete = temp.next;
+                    temp.next = temp.next.next;
+                    nodeToDelete = null;
+                }
+                else
+                {
+
+                    //5. Else the given node will be empty.
+                    Console.Write("\nThe node is already null.");
+                }
+            }
+        }
     }
 }

@@ -190,6 +190,73 @@ namespace DataStructuresIntro
             //
 
 
+
+            /*
+            Hashtable hashtable = new Hashtable();
+            hashtable.Add(1, 'a');
+            hashtable.Add(2, 'b');
+            
+                if (hashtable.Contains(3))
+                {
+                    Console.WriteLine("Hello world");
+                }
+                else
+                {
+                    Console.WriteLine("Hiiiii");
+                }
+            */
+
+            /*
+            HashSet<int> hashset = new HashSet<int>();
+            hashset.Add(1);
+            hashset.Add(2);
+            hashset.Add(1);
+            hashset.Add(6);
+            hashset.Add(7);
+            hashset.Add(1);
+            hashset.Add(4);
+            hashset.Add(6);
+            HashSet<int> hashset2 = new HashSet<int>();
+            hashset2.Add(1);
+            hashset2.Add(2);
+            hashset2.Add(1);
+            hashset2.Add(6);
+            hashset2.Add(7);
+            hashset2.Add(1);
+            hashset2.Add(6);
+            hashset.ExceptWith(hashset2);
+            //hashset.UnionWith(hashset2);
+
+            foreach (var item in hashset)
+            {
+                Console.WriteLine(item);
+            }
+            */
+
+
+            LinkedList<int> linkedlist = new LinkedList<int>();
+            linkedlist.AddLast(1);
+            linkedlist.AddLast(2);
+            linkedlist.AddLast(3);
+            linkedlist.AddLast(4);
+            linkedlist.AddLast(5);
+            linkedlist.AddLast(6);
+            linkedlist.AddLast(7);
+            foreach(var item in linkedlist)
+            {
+                Console.WriteLine(item);
+            }
+
+            SinglyLinkedList list = new SinglyLinkedList();
+            list.AddLast(1);
+            list.AddLast(2);
+            list.AddLast(3);
+            list.AddLast(4);
+            list.AddLast(5);
+            list.AddLast(6);
+            list.AddLast(7);
+            list.Print();
+
         }
     }
 }
