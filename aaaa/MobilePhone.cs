@@ -4,6 +4,20 @@ using System.Text;
 
 namespace aaaa
 {
+    #region abstract class can have a abstract derived class
+    abstract class A
+    {
+        public abstract void Fo();
+    }
+    abstract class B : A
+    {
+        public override void Fo()
+        {
+            Console.WriteLine("B");
+        }
+    }
+#endregion
+
     //abstract
     class Animal  // Base class (parent) 
     {

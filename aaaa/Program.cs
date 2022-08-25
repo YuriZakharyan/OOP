@@ -75,7 +75,7 @@ namespace aaaa
             ///events_Delegates.printEvent += new Print(events_Delegates.Mul);
 
 
-
+            /*
             Events_Delegates events_Delegates1 = new Events_Delegates();
             Morning morning = new Morning(events_Delegates1.Wash);
             morning += events_Delegates1.Tooth;
@@ -100,9 +100,10 @@ namespace aaaa
             }
 
 
+            */
 
-
-
+            AA obj = new BB();
+            obj.Print();
 
 
 
