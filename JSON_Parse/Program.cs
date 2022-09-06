@@ -31,7 +31,7 @@ namespace JSON_Parse
                     "Programming"
                 }
             };
-
+            
             string text1 = JsonConvert.SerializeObject(student1);       //Parse json
             string text2 = JsonConvert.SerializeObject(student2);
             Console.WriteLine(text1);
@@ -39,7 +39,6 @@ namespace JSON_Parse
 
             File.WriteAllText(@"D:\Yuri.txt", text1);       //write json in .txt file 
             File.WriteAllText(@"D:\Harut.txt", text2);
-
         }
     }
 }
