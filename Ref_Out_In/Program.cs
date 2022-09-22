@@ -16,25 +16,35 @@ namespace Ref_Out_In
         static void Foo2(in Point value)
         {
         }
+
+
+        
         static void Main(string[] args)
         {
-            Point ob = new Point();
-            Stopwatch sw = Stopwatch.StartNew();
-            for(int i = 0; i<int.MaxValue; i++)
-            {
-                Foo1(ob);
-            }
-            sw.Stop();
-            Console.WriteLine($"Foo1:   {sw.ElapsedMilliseconds}");
+            int a = 1;
+            Console.WriteLine(RefOutClass.Foo(ref a));
 
-            sw.Restart();
-            for(int i = 0; i<int.MaxValue; i++)
-            {
-                Foo2(ob);
-            }
+            Console.WriteLine(RefOutClass.Foo(ref a));
+            Console.WriteLine(RefOutClass.Foo1(out a));
+            Console.WriteLine(RefOutClass.Foo1(out a));
 
-            sw.Stop();
-            Console.WriteLine($"Foo2:   {sw.ElapsedMilliseconds}");
+            ///Point ob = new Point();
+            ///Stopwatch sw = Stopwatch.StartNew();
+            ///for(int i = 0; i<int.MaxValue; i++)
+            ///{
+            ///    Foo1(ob);
+            ///}
+            ///sw.Stop();
+            ///Console.WriteLine($"Foo1:   {sw.ElapsedMilliseconds}");
+            ///
+            ///sw.Restart();
+            ///for(int i = 0; i<int.MaxValue; i++)
+            ///{
+            ///    Foo2(ob);
+            ///}
+            ///
+            ///sw.Stop();
+            ///Console.WriteLine($"Foo2:   {sw.ElapsedMilliseconds}");
         }
     }
 }
